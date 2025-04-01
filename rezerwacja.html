@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rezerwacja stolika - Moja Restauracja</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+        rel="stylesheet" 
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
+        crossorigin="anonymous">
+
+  <style>
+    header {
+      background-image: url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1200&q=80');
+      background-size: cover;
+      background-position: center;
+    }
+    header .overlay {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 80px 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Pasek nawigacyjny -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Moja Restauracja</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navBar" aria-controls="navBar" aria-expanded="false" aria-label="Przełącz nawigację">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navBar">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#">Strona główna</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Menu</a></li>
+          <li class="nav-item"><a class="nav-link active" href="#">Rezerwacja</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Kontakt</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Nagłówek z obrazkiem w tle -->
+  <header>
+    <div class="overlay text-white text-center">
+      <div class="container">
+        <h1>Zarezerwuj stolik</h1>
+        <p class="lead">Wypełnij formularz, aby zarezerwować stolik w naszej restauracji</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- Formularz rezerwacji + Obrazek -->
+  <main class="container my-5">
+    <div class="row align-items-center">
+      
+      <!-- Obrazek -->
+      <div class="col-lg-6 mb-4 d-none d-lg-block">
+        <img src="https://images.unsplash.com/photo-1555992336-03a23c06fbdc?auto=format&fit=crop&w=900&q=80" 
+             alt="Wnętrze restauracji" class="img-fluid rounded shadow">
+      </div>
+
+      <!-- Formularz -->
+      <div class="col-lg-6">
+        <form>
+          <div class="mb-3">
+            <label for="name" class="form-label">Imię i nazwisko</label>
+            <input type="text" class="form-control" id="name" placeholder="Jan Kowalski" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Adres e-mail</label>
+            <input type="email" class="form-control" id="email" placeholder="jan@example.com" required>
+          </div>
+          <div class="mb-3">
+            <label for="date" class="form-label">Data rezerwacji</label>
+            <input type="date" class="form-control" id="date" required>
+          </div>
+          <div class="mb-3">
+            <label for="time" class="form-label">Godzina</label>
+            <input type="time" class="form-control" id="time" required>
+          </div>
+          <div class="mb-3">
+            <label for="guests" class="form-label">Liczba osób</label>
+            <input type="number" class="form-control" id="guests" min="1" max="20" required>
+          </div>
+          <div class="mb-3">
+            <label for="notes" class="form-label">Dodatkowe uwagi</label>
+            <textarea class="form-control" id="notes" rows="3" placeholder="Preferencje dotyczące stolika, alergie itp."></textarea>
+          </div>
+          <button type="submit" class="btn btn-success w-100">Zarezerwuj teraz</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <!-- Stopka -->
+  <footer class="bg-dark text-white text-center py-4">
+    &copy; 2025 Moja Restauracja – Wszystkie prawa zastrzeżone
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+          integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" 
+          crossorigin="anonymous"></script>
+</body>
+</html>
